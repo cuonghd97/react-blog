@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --open",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://cuonghd97.github.io",
+  "homepage": "https://cuonghd97.github.io/about-me",
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
