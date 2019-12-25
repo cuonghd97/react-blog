@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -32,11 +32,18 @@ export default function SideBarLeft(props) {
 						<div className="widget Pagelist" id="Pagelist8">
 							<div className="widget-content">
 								<ul className="menu">
-									<li><Link to="#">Home</Link></li>
-									<li><Link to="#">Home</Link></li>
-									<li><Link to="#">Home</Link></li>
-									<li><Link to="#">Home</Link></li>
-									<li><Link to="#">Home</Link></li>
+									<li>
+										<NavLink 
+											to="/home"
+											activeClassName="active-link"
+										>Home</NavLink>
+									</li>
+									<li>
+										<NavLink 
+											to="/about"
+											activeClassName="active-link"
+										>About</NavLink>
+									</li>
 								</ul>
 							</div>
 						</div>

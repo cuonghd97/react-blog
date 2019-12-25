@@ -1,11 +1,13 @@
 import './style.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row } from 'react-bootstrap'
 import SidebarLeft from './components/SidebarLeft'
 import Content from './components/Content'
+import About from './components/About'
+import Post from './components/Post'
 
 
 const App = () => {
@@ -14,7 +16,17 @@ const App = () => {
 			<div className="container-fluid">
 				<Row>
 					<SidebarLeft />
-					<Content />
+					<Switch>
+						<Route exact path={["/home", "/"]}>
+							<Content />
+						</Route>
+						<Route exact path="/about">
+							<About />
+						</Route>
+						<Route exact path="/post/:id" component={Post}>
+							
+						</Route>
+					</Switch>
 				</Row>
 			</div>
 		</BrowserRouter>
